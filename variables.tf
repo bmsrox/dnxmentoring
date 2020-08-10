@@ -22,3 +22,7 @@ variable "aws_instance_type" {
 variable "wpkeypair" {
   default = "wordpress_test"
 }
+
+# variable "db_password" {
+#   description = "DB password"
+# }

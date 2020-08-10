@@ -21,3 +21,12 @@ resource "aws_subnet" "public" {
     Name = "Public"
   }
 }
+
+resource "aws_db_subnet_group" "database" {
+  name = "main-db-subnet"
+  subnet_ids = aws_subnet.private.*.id
+
+  tags = {
+    Name = "dnxmentoring - DB subnet group"
+  }
+}
